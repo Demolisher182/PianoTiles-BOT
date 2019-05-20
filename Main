@@ -1,1 +1,16 @@
+mport os
+from PIL import Image
+m=((7,576),(132,576),(262,576),(372,576))
 
+os.system("sleep 5")
+while True:
+ os.system('su -c "screencap /sdcard/p.png"')
+ pic=Image.open("/sdcard/p.png")
+ i=-1
+ for xy in m:
+  i+=1
+  if pic.getpixel(xy)==(32,32,32,255):
+   break
+ x,y=m[i]
+ str="input tap {0} {1}".format(x,y)
+ os.system('su -c "'+str+'"')

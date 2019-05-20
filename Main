@@ -1,4 +1,4 @@
-mport os
+import os
 from PIL import Image
 m=((7,576),(132,576),(262,576),(372,576))
 
